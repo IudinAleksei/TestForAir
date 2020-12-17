@@ -1,0 +1,43 @@
+/* Menu Button*/ 
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 10;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  & input {
+    display: none;
+  }
+  &:hover .menu-button__line {    
+    box-shadow: 0 0 20px 3px grey;
+  } 
+}
+
+.menu-button__line {
+  margin: 0 auto;    
+  width: 80%;
+  height: 3px;   
+  background-color: grey;
+  @extend %transition;
+  &:not(:first-of-type) {
+    margin-top: 5px;
+  }
+}
+
+/* Menu Button transform to chest */
+.menu-button>input:checked ~ .menu-button__line {
+  &:last-of-type {
+  transform: translateY(-8px) rotateZ(45deg);
+  }
+  &:first-of-type {
+    transform: translateY(8px) rotateZ(-45deg);  
+  }
+  &:nth-of-type(2) {
+    transform: rotateZ(-45deg);  
+  }
+}
