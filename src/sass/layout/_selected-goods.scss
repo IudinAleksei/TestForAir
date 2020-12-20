@@ -1,0 +1,16 @@
+.selected-goods {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-goods__title {
+  text-align: center;
+}
+
+.selected-goods__gallery {
+  display: flex;
+  align-items: space-between;
+}
